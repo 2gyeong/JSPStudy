@@ -174,7 +174,13 @@ if (true) return;  */
   <!--  페이징 출력 부분 : [처음][이전] 1 2 3 4 5 [다음][마지막] -->
  
  <%
- 	Vector name = new Vector(); 	//name 컬럼의 모든값을 저장하는 vector 
+	Vector name = new Vector(); 	
+	Vector inputdate = new Vector(); 
+	Vector email = new Vector();
+	Vector subject = new Vector();
+	Vector readcount = new Vector();
+	Vector step = new Vector();
+	Vector keyid = new Vector();	//name 컬럼의 모든값을 저장하는 vector 
 	// 페이징을 처리할 변수 선언  <<<시작>>> 
 	
 	int where = 1; 			//현재 위치한 페이징 변수 
@@ -222,11 +228,14 @@ if (true) return;  */
 	int totalpages = 0 ; 		// 총 페이지 갯수 
 	
 	// <<<페이징 처리할 변수 선언 끝>>>
-
+	
+	//페이징 출력 부분
 	//  [처음][이전]
 	if (wheregroup > 1){ 	//현재 나의 그룹이 1 이상일때 처음
-		out.println ("[<a href='freeboard_search.jsp?gogroup=1'>처음</a>]");
-		out.println ("[<a href='freeboard_search.jsp?gogroup="+priorgroup +"'>이전</a>]");
+		out.println ("[<a href='freeboard_search.jsp?gogroup=1");
+		out.println ("&stype="+ what+"&sval=" + val + ">처음</a>");
+		out.println ("[<a href='freeboard_search.jsp?gogroup="+priorgroup);
+		out.println ("&stype="+ what+"&sval=" + val + ">이전</a>");
 	}else {			// 현재 나의 페이지 그룹이 1일때는 
 		out.println ("[처음]"); 
 		out.println ("[이전]"); 
@@ -239,15 +248,18 @@ if (true) return;  */
 			if (jj == where) {		//jj 가 자신의 페이지 번호라면 링크 없이 출력
 				out.println ("["+jj+"]"); 
 			}else {		//jj가 현재 자신의 페이지 번호가 아니라면 링크를 걸어서 출력
-				out.println ("[<a href=guestlab_list.jsp?go="+ jj + ">" +jj+ "</a>]");
+				out.println ("[<a href=guestlab_list.jsp?go="+ jj);
+				out.println ("&stype=" + what + "&sval=" +jj+ "</a>]");
 			}
 		}
 	}
 	
 	// [다음][마지막]
 	if (wheregroup < totalgroup ) {  //링크를 처리
-		out.println ("[<A href=freeboard_search.jsp?gogroup="+ nextgroup + ">다음</A>]"); 
-		out.println ("[<A href=freeboard_search.jsp?gogroup="+ totalgroup + ">마지막]</A>"); 
+		out.println ("[<A href=freeboard_search.jsp?gogroup="+ nextgroup);
+		out.println ("&stype="+ what+"&sval=" + val+">다음</a>");
+		out.println ("[<A href=freeboard_search.jsp?gogroup="+ totalgroup);
+		out.println ("&stype="+ what+"&sval=" + val+">마지막</a>");
 	}else {  // 마지막 페이지에 왔을때 링크를 해지 
 		out.println ("[다음]"); 
 		out.println ("[마지막]"); 
