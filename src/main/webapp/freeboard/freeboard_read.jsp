@@ -38,7 +38,7 @@
 				// 매번컴파일 하지 않기 때문에 처리속도가 빠름 
 		sql = "select * from freeboard where id = ?"; 
 		pstmt = conn.prepareStatement(sql);      //pstmt 객체 생성시 sql 문을 넣는다. 
-		pstmt.setInt(1, id);     //1 첫번째 물은표, 들어갈 변수 
+		pstmt.setInt(1, id);     //1 첫번째 물음표, 들어갈 변수 
 		rs = pstmt.executeQuery();  	//select 문인 경우 executeQuery() 
 										//insert, update, delete문인경우 : executeUpdate()
 		

@@ -37,11 +37,11 @@
 <BODY>
 
 
-
+<CENTER>
 <P>
 <P align=center><FONT color=#0000ff face=굴림 size=3><STRONG>자유 게시판</STRONG></FONT></P> 
 <P>
-<CENTER>
+
  <TABLE border=0 width=600 cellpadding=4 cellspacing=0>
   <tr align="center"> 
    <td colspan="5" height="1" bgcolor="#1F4F8F"></td>

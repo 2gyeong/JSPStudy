@@ -17,7 +17,7 @@
  <STRONG>자유 게시판(검색모드)</STRONG>
  </FONT>
 </P> 
-<FORM method=post name=search action="freeboard_search.jsp">
+<FORM method=post name=search action="freeboard_search.jsp"> <!-- form 파일이 자기 자신 -->
  <TABLE border=0 width=75%>
   <TR>
    <TD align=left width=30% valign=bottom>
@@ -135,12 +135,12 @@ if (true) return;
  <%	
  	//페이징 처리 
  	 Vector name=new Vector();
- Vector inputdate=new Vector();
- Vector email=new Vector();
- Vector subject=new Vector();
- Vector rcount=new Vector();
- Vector keyid=new Vector();
- Vector step=new Vector();
+	 Vector inputdate=new Vector();
+	 Vector email=new Vector();
+	 Vector subject=new Vector();
+	 Vector rcount=new Vector();
+	 Vector keyid=new Vector();
+	 Vector step=new Vector();
  
  int where=1;       //현재 위치한 페이지 
 
@@ -198,14 +198,14 @@ if (true) return;
  	 */
  	
  	stmt = conn.createStatement(); 
- 	rs = stmt.executeQuery(sql); 	//
+ 	rs = stmt.executeQuery(sql); 	
  	
  	if (!(rs.next())){
  		out.println("해당내용이 DB 에 존재 하지 않습니다. ");
  	} else {   //검색된 내용이 존재 한다면 
  		
  		do {
- 			
+ 			// Vector 객체에 값 넣기
  		    keyid.addElement(new Integer(rs.getInt("id")));
  		    name.addElement(rs.getString("name"));
  		    email.addElement(rs.getString("email"));
@@ -267,7 +267,7 @@ if (true) return;
   out.print("[<A href=freeboard_search.jsp?gogroup=1"); 
   out.print("&stype="+ what+"&sval=" + val +">처음</A>]");
   out.print("[<A href=freeboard_search.jsp?gogroup="+priorgroup);
-  out.print("&stype="+ what+"&sval=" + val +">이전</A>]");
+  out. print("&stype="+ what+"&sval=" + val +">이전</A>]");
  } else {
   out.println("[처음]") ;
   out.println("[이전]") ;

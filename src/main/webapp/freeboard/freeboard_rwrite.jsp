@@ -94,7 +94,7 @@ function check(){
 <%
                            
   %>
-  <FORM name='msgrewrite'  method=POST action="freeboard_rsave.jsp">
+  <FORM name='msgrewrite'  method=POST action="freeboard_rsave02.jsp">
    <table width="600" cellspacing="0" cellpadding="2" align="center">
     <tr> 
      <td colspan="2" bgcolor="#1F4F8F" height="1"></td>
@@ -132,7 +132,7 @@ function check(){
     <tr> 
      <td width="124" align="center"  bgcolor="#f4f4f4">암 호</td>
      <td width="494" style="padding:0 0 0 10" height="25"> 
-      <input type='password' name='password'  class="input_style1"><br>(정확한 비밀번호를 입력해야만 수정이 됩니다.)
+      <input type='password' name='password' class="input_style1"><br>(정확한 비밀번호를 입력해야만 수정이 됩니다.)
      </td>
     </tr>
     <tr> 
@@ -151,7 +151,7 @@ function check(){
         <td width="64%">&nbsp;</td>
         <td width="12%"><a href="#" onClick="check();"><img src="image/ok.gif" border="0"></a></td>
         <td width="12%"><a href="#" onClick="history.go(-1)"><img src="image/cancle.gif" border="0"></td>
-        <td width="12%"><A href="freeboard_list.jsp?go=<%=request.getParameter("page") %>"> <img src="image/list.jpg" border=0></a></td>
+        <td width="12%"><A href="freeboard_list03.jsp?go=<%=request.getParameter("page") %>"> <img src="image/list.jpg" border=0></a></td>
        </tr>
       </table>
      </td>
@@ -160,6 +160,9 @@ function check(){
    <INPUT type="hidden" name="step" value="<%=step%>">
    <INPUT type="hidden" name="mid" value="<%=mid%>">
    <INPUT type="hidden" name="rnum" value="<%=rnum%>">
+   
+   <!-- page 변수를 넘기기 위해 input type hidden 추가 -->
+   <input type="hidden" name="page" value="<%=request.getParameter("page")%>">
   </FORM>
 <%
 	} //if else의 마지막 블락
