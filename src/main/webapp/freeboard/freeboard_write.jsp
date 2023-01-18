@@ -31,7 +31,8 @@
     }                                            
     </SCRIPT>                                    
     <link href="filegb.css" rel="stylesheet" type="text/css">   
-    </HEAD>                                       
+    </HEAD> 
+                                          
     <BODY>                                        
     <P>                                           
     <FORM name="msgwrite" method="post" action="freeboard_save03.jsp">    
@@ -88,9 +89,7 @@
          <td width="12%"><a href="#" onClick="history.go(-1)"><img src="image/cancle.gif" width="46" height="20" border="0"></td>
          <td width="9%"><a href="#" onClick="check();"><img src="image/ok.gif" width="46" height="20" border="0"></a></td>
         </tr>
-       </table>
-      </td>
-     </tr>
+
     </table>                                       
     </CENTER>                                            
     </FORM>                                        

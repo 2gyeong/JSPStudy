@@ -27,3 +27,8 @@ commit;
  * 	
  * 		
  */
+
+Insert into MBTBL (IDX,ID,PASS,NAME,EMAIL,CITY,PHONE) values (2,'bbb','1','김철수','bbb@bbb.com','경기','010-1111-1111');
+Insert into MBTBL (IDX,ID,PASS,NAME,EMAIL,CITY,PHONE) values (4,'ddd','1','맹구','ddd@ddd.com','부산','010-9999-9999');
+Insert into MBTBL (IDX,ID,PASS,NAME,EMAIL,CITY,PHONE) values (3,'ccc','1','신짱아','ccc','대전','010-1234-1234');
+Insert into MBTBL (IDX,ID,PASS,NAME,EMAIL,CITY,PHONE) values (1,'aaa','1','김짱구','aaa@aaa.com','서울','010-1234-1234');

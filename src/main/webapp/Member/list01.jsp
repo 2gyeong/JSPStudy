@@ -42,16 +42,17 @@
   	%>			
 			<tr> 
 				<td> <%= rs.getInt("idx") %> </td> 
-				<td> <a href="read01.jsp?id=<%= rs.getString("idx") %>"> <%= rs.getString("id") %></a></td>
+				<td> <a href="read01.jsp?idx=<%= rs.getString("idx") %>"> <%= rs.getString("id") %></a></td>
 				<td> <%= rs.getString("pass") %> </td> 
 				<td> <%= rs.getString("name") %> </td> 
 				<td> <%= rs.getString("email") %> </td> 
 				<td> <%= rs.getString("city") %> </td> 
 				<td> <%= rs.getString("phone") %> </td> 
-				 
+				
 			</tr>			
 			
-			<%	
+			<%				
+			
   			} while (rs.next());
   			
   		} else {
@@ -60,7 +61,7 @@
   		
 	
 		%>
-
+<tr ><td colspan='7' align='right'><A href="Insert01.jsp"><img src="image/write.gif" border="0"></A></td></tr>
 </table>
 </center> 
 </body>
