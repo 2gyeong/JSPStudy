@@ -28,7 +28,7 @@
 <P align=center>
 <FONT face=굴림 size=3><STRONG>회원 정보를 삭제하겠습니까?</STRONG></FONT></P> 
 <P>
-	<form name="wwdel" method = "post" action = "delete01_db.jsp">
+	<form name="wwdel" method = "post" action = "delete02_db.jsp">
 	<input type="hidden" name = "idx" value = "<%= request.getParameter("idx") %>"> 
    	<input type="hidden" name = "page" value = "<%= request.getParameter("page") %>">
 	
@@ -43,7 +43,7 @@
 	<table>
 	<tr>
 	<td width = "8%"> 
-		<a href = "list01.jsp?go=<%= request.getParameter("page") %>" > 
+		<a href = "list02.jsp?go=<%= request.getParameter("page") %>" > 
 			<img src = "image/list.jpg" width="48" height="19" border="0">
 		</a>
 	</td>

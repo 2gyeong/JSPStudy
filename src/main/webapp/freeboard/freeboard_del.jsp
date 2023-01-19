@@ -25,7 +25,7 @@
 <body>
    삭제 페이지 입니다.
    
-   <center>
+<center>
    	<form name ="msgdel" method = "post" action = "freeboard_deldb.jsp">
    		<!-- HTML 페이지에 출력은 하지 않으나 변수의 값을 다른 페이지로 넘길때  
    			id 변수와 page 변수의 값을 처리
@@ -88,8 +88,7 @@
    	
    	
    	</form>
-   
-   </center>
+</center>
 
 </body>
 </html>

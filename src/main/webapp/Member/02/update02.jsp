@@ -7,6 +7,7 @@
 <%  
 	String sql = null;
 	Statement stmt = null;
+	PreparedStatement pstmt = null;
 	ResultSet rs = null;
 	
 	int idx = Integer.parseInt(request.getParameter("idx"));
@@ -15,12 +16,14 @@
 /* 	out.println(idx);
 	if(true) return; */
 	
-
+	
+	
+	
 	try{
-		sql = "select*from mbTbl where idx = " + idx ;
-		
-		stmt = conn.createStatement();
-		rs = stmt.executeQuery(sql); 
+		sql = "select * from mbTbl where idx=?";
+		pstmt = conn.prepareStatement(sql);
+		pstmt.setInt(1, idx);
+		rs = pstmt.executeQuery();
 		
 		if (!(rs.next())){
 			
@@ -50,7 +53,7 @@ body{
  }
  .t1 td {
  	border : 1px solid black;
- 	border-collapse: collapse;
+ 	border-collapse:collapse;
  	padding:2%;
  }
  
@@ -98,11 +101,13 @@ function check(){
 <meta charset="UTF-8">
 <title>Update 를 통한 데이터 수정 </title>
 
+</style>
+
 
 </head>
 <body>
 <center>
-	<form name="wwrite" method = "post" action = "update01_db.jsp">
+	<form name="wwrite" method = "post" action = "update02_db.jsp">
 		<input type="hidden" name = "idx" value = "<%= idx %>">
 		<input type="hidden" name = "page" value = "<%= p %>">
 	<table class='t1'>
@@ -129,7 +134,7 @@ function check(){
 	<table>
 	<td ><a href="#" onClick="check();"><img src="image/ok.gif" border="0"></a></td>
      <td ><a href="#" onClick="history.go(-1)"><img src="image/cancle.gif"  border="0"></td>
-     <td ><A href="list01.jsp?go=<%= request.getParameter("page")%>"><img src="image/list.jpg" border=0></a></td>
+     <td ><A href="list02.jsp?go=<%= request.getParameter("page")%>"><img src="image/list.jpg" border=0></a></td>
 	</tr>
 	</table>
 	</table>
@@ -145,6 +150,7 @@ function check(){
 } finally {
 	if (conn != null) conn.close();
 	if (stmt != null) stmt.close();
+	if(pstmt != null) pstmt.close();
 	if (rs != null) rs.close();
 	
 }

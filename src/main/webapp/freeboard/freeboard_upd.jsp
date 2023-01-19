@@ -14,12 +14,12 @@
 	int id = Integer.parseInt(request.getParameter("id"));
 	String p = request.getParameter("page");
 	
-	/*
-	out.println(id + "<p/>");
+	
+/* 	out.println(id + "<p/>");
 	out.println(p);
 
-	if (true) return;
-	*/
+	if (true) return; */
+	
 	
 	try {
 		sql = "select * from freeboard where id =?";

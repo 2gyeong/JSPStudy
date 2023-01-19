@@ -49,7 +49,7 @@ function check(){
 </script>
 </head>
 <body>
-	<form name="wwrite" method = "post" action = "save01.jsp"> 
+	<form name="wwrite" method = "post" action = "save02.jsp"> 
 	<table>
 	<P>
 	<P >

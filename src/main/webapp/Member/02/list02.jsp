@@ -123,7 +123,7 @@
   	%>			
 			<tr> 
 				<td> <%= keyid.elementAt(j) %> </td> 
-				<td> <a href="read01.jsp?idx=<%= keyid.elementAt(j)  %>&page=<%= where %>">
+				<td> <a href="read02.jsp?idx=<%= keyid.elementAt(j)  %>&page=<%= where %>">
 					<%= id.elementAt(j) %></a></td>
 				<td> <%= pass.elementAt(j) %> </td> 
 				<td> <%= name.elementAt(j) %> </td> 

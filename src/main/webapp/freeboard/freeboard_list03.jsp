@@ -180,18 +180,14 @@
 		
 		
 		// 페이징 변수 출력 
-		/*
-		out.println ( "<p/> 총 레코드 갯수 (totalrows : ) : " + totalrows + "<p/>" ); 
+		
+/* 		out.println ( "<p/> 총 레코드 갯수 (totalrows : ) : " + totalrows + "<p/>" ); 
 		out.println ( "<p/> 전체 페이지 수 (totalpage : ) : " + totalpages + "<p/>" ); 
 		out.println ( "<p/> 시작 row 갯수 (startrow : ) : " + startrow + "<p/>" ); 
 		out.println ( "<p/> 마지막 row 갯수 (endrow : ) : " + endrow + "<p/>" ); 
-		*/
-		  	// 프로그램 멈춤 
 		
-		
-
-		
-		//if (true) return;
+		  	
+		if (true) return; // 프로그램 멈춤 	 */
 		
 		
 	//행당 페이지를 처리하면서 해당 페이지에 대한 내용을 출력 (rs의 값을 vector에 저장했으므로 for )

@@ -43,9 +43,10 @@ body{
 	
 	int idx = Integer.parseInt(request.getParameter("idx"));
 	
-	sql = "select*from mbTbl where idx = " + idx ;	
-	stmt = conn.createStatement();
-	rs = stmt.executeQuery(sql); 
+	sql = "select * from mbTbl where idx = ?";
+	pstmt = conn.prepareStatement(sql); 
+	pstmt.setInt(1, idx); 
+	rs = pstmt.executeQuery();
 	
 	if(rs.next()){
 
@@ -99,9 +100,9 @@ body{
 
 <table width="200" border="0" cellpadding="0" cellspacing="5">
 	<tr> 
-		<td align="right" ><A href="list01.jsp?&page=<%= request.getParameter("page")%>"><img src="image/list.jpg" border=0></a></td>
-		<td align="right" ><A href="update01.jsp?idx=<%= idx %>&page=<%= request.getParameter("page") %>"><img src="image/edit.jpg" border=0></A></td>
-		<td align="right" ><A href="delete01.jsp?idx=<%= idx %>&name=<%  %>&page=<%= request.getParameter("page") %>"><img src="image/del.jpg"  border=0></A></td>
+		<td align="right" ><A href="list02.jsp?&page=<%= request.getParameter("page")%>"><img src="image/list.jpg" border=0></a></td>
+		<td align="right" ><A href="update02.jsp?idx=<%= idx %>&page=<%= request.getParameter("page") %>"><img src="image/edit.jpg" border=0></A></td>
+		<td align="right" ><A href="delete02.jsp?idx=<%= idx %>&page=<%= request.getParameter("page") %>"><img src="image/del.jpg"  border=0></A></td>
 	</tr>
 </table>
 
